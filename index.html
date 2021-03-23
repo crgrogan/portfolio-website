@@ -1,42 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conor Grogan</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://use.fontawesome.com/f23182ffea.js"></script>
+  </head>
+  <body>
     <header>
-        <div class="navbar">
-            <div class="wrapper">
-                <nav>
-                    <div class="logo"><img src="./images/logo.png" alt="Conor Grogan Logo"></div>
-                    <ul class="nav-links">
-                        <li class="nav-item"><a href="#home">Home</a></li>
-                        <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a href="#cv">CV</a></li>
-                        <li class="nav-item contact-link"><a href="#contact">Contact</a></li>
-                        <li class="nav-menu">Menu</li>
-                    </ul>
-                </nav>
+      <div class="navbar">
+        <div class="wrapper">
+          <nav>
+            <div class="logo">
+              <img src="./images/logo.png" alt="Conor Grogan Logo" />
             </div>
+            <ul class="nav-links">
+              <li class="close-hamburger"><i class="fa fa-times"></i></li>
+              <li class="nav-item home-link"><a href="#home">Home</a></li>
+              <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
+              <li class="nav-item"><a href="#cv">Skills/CV</a></li>
+              <li class="nav-item contact-link">
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+            <div class="open-hamburger"><i class="fa fa-bars"></i></div>
+          </nav>
         </div>
-        <section class="banner">
-            <div class="wrapper">
-                <h1>Hello, I'm Conor Grogan.</h1>
-                <h2>I am a full stack developer based in Ireland.</h2>
-                <button class="view-portfolio-btn">VIEW MY WORK</button>
-            </div>
-        </section>
+      </div>
+      <section id="home" class="banner">
+        <div class="wrapper">
+          <h1>Hello, I'm Conor Grogan.</h1>
+          <h2>I am a full stack developer based in Ireland.</h2>
+          <button class="view-portfolio-btn">VIEW MY WORK</button>
+        </div>
+      </section>
     </header>
-    <main>  
+    <main>
+      <section id="portfolio" class="portfolio">
+        <div class="wrapper">
+          <ul class="portfolio-navbar">
+            <li class="portfolio-nav-item active-portfolio-category">All</li>
+            <li class="portfolio-nav-item">Javascript</li>
+            <li class="portfolio-nav-item">React</li>
+            <li class="portfolio-nav-item">Angular</li>
+          </ul>
+          <div class="portfolio-items">
+            <div class="portfolio-item">
+              <div class="portfolio-item-img-container">
+                <img src="./images/the-movie-hub.png" alt="Image of project" />
+                <i class="fa fa-eye"></i>
+              </div>
+              <p>
+                Browse the latest movies. Log in to your TMDB account to like,
+                save and rate your favourites.
+              </p>
+            </div>
+            <div class="portfolio-item">
+              <div class="portfolio-item-img-container">
+                <img src="./images/the-movie-hub.png" alt="Image of project" />
+                <i class="fa fa-eye"></i>
+              </div>
+              <p>
+                Browse the latest movies. Log in to your TMDB account to like,
+                save and rate your favourites.
+              </p>
+            </div>
+            <div class="portfolio-item">
+              <div class="portfolio-item-img-container">
+                <img src="./images/the-movie-hub.png" alt="Image of project" />
+                <i class="fa fa-eye"></i>
+              </div>
+              <p>
+                Browse the latest movies. Log in to your TMDB account to like,
+                save and rate your favourites.
+              </p>
+            </div>
+            <div class="portfolio-item">
+              <div class="portfolio-item-img-container">
+                <img src="./images/the-movie-hub.png" alt="Image of project" />
+                <i class="fa fa-eye"></i>
+              </div>
+              <p>
+                Browse the latest movies. Log in to your TMDB account to like,
+                save and rate your favourites.
+              </p>
+            </div>
+            <div class="portfolio-item">
+              <div class="portfolio-item-img-container">
+                <img src="./images/the-movie-hub.png" alt="Image of project" />
+                <i class="fa fa-eye"></i>
+              </div>
+              <p>
+                Browse the latest movies. Log in to your TMDB account to like,
+                save and rate your favourites.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="cv" class="cv">
+        <div class="wrapper">
+          <h1>My Skills</h1>
+          <div class="skills">
+            <div class="skills-card">
+              <ul>
+                <li class="skills-card-header">Markup/Styling</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Sass</li>
+                <li>Bootstrap</li>
+              </ul>
+            </div>
+            <div class="skills-card">
+              <ul>
+                <li class="skills-card-header">Frontend</li>
+                <li>Javascript</li>
+                <li>JQuery</li>
+                <li>React</li>
+                <li>Redux</li>
+                <li>Angular</li>
+              </ul>
+            </div>
+            <div class="skills-card">
+              <ul>
+                <li class="skills-card-header">Backend</li>
+                <li>Node</li>
+              </ul>
+            </div>
+            <div class="skills-card">
+              <ul>
+                <li class="skills-card-header">Databases</li>
+                <li>MongoDB</li>
+                <li>SQL</li>
+                <li>GraphQL</li>
+              </ul>
+            </div>
+          </div>
+          <button class="download-cv-btn">Download My CV</button>
+        </div>
+      </section>
     </main>
-    <footer>
-    </footer>
+    <footer></footer>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
