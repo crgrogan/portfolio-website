@@ -1,7 +1,7 @@
 :root {
-  --primary-bg-color: #202032;
+  --primary-bg-color: #000f13; /*  #151524 #202032 */
   --secondary-bg-color: #eeecec;
-  --tertiary-bg-color: #f51b4e;
+  --tertiary-bg-color: #f1093f; /* #f51b4e */
   --primary-font-color: #050508;
   --secondary-font-color: #fff;
 }
@@ -81,8 +81,12 @@ button:hover {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--primary-bg-color);
+  background-color: transparent;
   z-index: 99;
+}
+
+.solid {
+  background-color: var(--primary-bg-color);
 }
 
 nav {
@@ -162,6 +166,7 @@ nav {
   .home-link {
     border-top: 1px solid var(--primary-bg-color);
   }
+
   .contact-link {
     border-bottom: none;
   }
@@ -184,10 +189,14 @@ nav {
   display: flex;
   align-items: center;
   height: 100vh;
-  background-color: var(--primary-bg-color);
-  /* background-image: url("./images/background.png");
-  background-position: center; */
-  color: var(--secondary-font-color);
+  /*  background-image: url("https://images.unsplash.com/photo-1537819191377-d3305ffddce4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1416&q=80"); */
+  /*  background-image: url("https://images.unsplash.com/photo-1531213203257-16afb0eac95e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1458&q=80"); */
+  /* background-image: url("https://images.unsplash.com/photo-1573767291321-c0af2eaf5266?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1524&q=80"); */
+  background-image: url("./images/banner-image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--secondary-bg-color);
   text-align: center;
 }
 
@@ -197,7 +206,7 @@ nav {
   background: transparent;
   border: 1px solid var(--secondary-font-color);
   padding: 1em 2em;
-  margin-top: 1em;
+  margin: 1em 0 2em 0;
 }
 
 .view-portfolio-btn:hover,
@@ -239,7 +248,7 @@ nav {
 
 .portfolio-item {
   border: 1px solid lightgray;
-  background-color: #fff;
+  background-color: var(--secondary-font-color);
 }
 
 .portfolio-item img {
@@ -338,7 +347,7 @@ nav {
 }
 
 .skills-card ul {
-  background-color: #fff;
+  background-color: var(--secondary-font-color);
   border-radius: 5px;
   border-radius: 1rem;
 }
@@ -492,7 +501,7 @@ nav {
 /* Email modal */
 
 .email-modal {
-  display: flex; /* Hidden by default */
+  display: none; /* Hidden by default */
   position: fixed;
   z-index: 100;
   left: 0;
