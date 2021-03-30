@@ -192,7 +192,7 @@ nav {
   /*  background-image: url("https://images.unsplash.com/photo-1537819191377-d3305ffddce4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1416&q=80"); */
   /*  background-image: url("https://images.unsplash.com/photo-1531213203257-16afb0eac95e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1458&q=80"); */
   /* background-image: url("https://images.unsplash.com/photo-1573767291321-c0af2eaf5266?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1524&q=80"); */
-  background-image: url("./images/banner-image.jpg");
+  background-image: url("./assets/banner-image.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -200,17 +200,17 @@ nav {
   text-align: center;
 }
 
-.view-portfolio-btn {
+.banner-btn {
   font-weight: 700;
   color: var(--secondary-font-color);
   background: transparent;
   border: 1px solid var(--secondary-font-color);
   padding: 1em 2em;
-  margin: 1em 0 2em 0;
+  margin: 1em;
 }
 
-.view-portfolio-btn:hover,
-.view-portfolio-btn:focus {
+.banner-btn:hover,
+.banner-btn:focus {
   background-color: var(--tertiary-bg-color);
   border: 1px solid var(--tertiary-bg-color);
 }
@@ -219,7 +219,8 @@ nav {
 
 .portfolio-section {
   background-color: var(--secondary-bg-color);
-  padding-bottom: 4em;
+  padding-bottom: 6em;
+  min-height: 450px;
 }
 
 .portfolio-navbar {
@@ -293,11 +294,27 @@ nav {
   opacity: 1;
 }
 
-.portfolio-item p {
-  padding: 0 0.5em;
+.project-info {
+  padding: 0.5em;
+}
+
+.project-name {
+  text-align: center;
+  margin: 0;
+}
+
+.project-github-link {
+  font-weight: 700;
+}
+
+.project-github-link:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {
+  .portfolio-section {
+    min-height: 400px;
+  }
   .portfolio-items {
     grid-template-columns: 1fr 1fr;
   }
@@ -321,12 +338,12 @@ nav {
   background-color: lightgray;
   overflow: auto;
   overflow-x: hidden;
-  padding-bottom: 4em;
+  padding-bottom: 6em;
 }
 
 .cv-section h1 {
   text-align: center;
-  margin: 1.5em 0;
+  margin: 2em 0;
 }
 
 .skills {
@@ -406,13 +423,13 @@ nav {
 .contact-section {
   background-color: #252934;
   overflow: auto;
-  padding-bottom: 4em;
+  padding-bottom: 6em;
   color: var(--secondary-font-color);
 }
 
 .contact-section h1 {
   text-align: center;
-  margin: 1.5em 0;
+  margin: 2em 0;
 }
 
 .contact-body {

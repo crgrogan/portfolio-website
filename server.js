@@ -1,19 +1,23 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 const multiparty = require("multiparty");
 const path = require("path");
 require("dotenv").config();
+const Project = require("./models/Project");
 
 const PORT = process.env.PORT || 5000;
 
 const app = express();
 
+const MONGODB = process.env.MONGODB_URL;
+
 app.use(cors({ origin: "*" }));
 
 app.use(express.json());
 
-app.use("/public", express.static(path.resolve(__dirname, "client", "public"))); //make public static
+app.use("/src", express.static(path.resolve(__dirname, "client", "src"))); //make src static
 
 const transporter = nodemailer.createTransport({
   host: "smtp.live.com",
@@ -30,6 +34,15 @@ transporter.verify((error, success) => {
     console.log(error);
   } else {
     console.log("Server is ready to take messages");
+  }
+});
+
+app.get("/data", async (req, res) => {
+  try {
+    const projects = await Project.find({});
+    res.status(200).send({ projects });
+  } catch (err) {
+    res.status(401).send({ msg: err.message });
   }
 });
 
@@ -62,12 +75,20 @@ app.post("/send", (req, res) => {
 });
 
 //Index page (static HTML)
-app.route("/").get((req, res) => {
-  res.sendFile(path.resolve(__dirname, "client", "index.html"));
+app.route("*").get(async (req, res) => {
+  res.sendFile(path.resolve(__dirname, "client", "dist", "index.html"));
 });
 
-/*************************************************/
-// Express server listening...
+// connect to MongoDB
+mongoose
+  .connect(MONGODB, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useCreateIndex: true,
+  })
+  .then(() => console.log("Connected to database"));
+
+// Express server listening
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}...`);
 });

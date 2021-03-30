@@ -1,3 +1,5 @@
+import "./style.css";
+
 document.addEventListener(
   "DOMContentLoaded",
   () => {
@@ -7,11 +9,14 @@ document.addEventListener(
     const portfolioLink = document.querySelector(".portfolio-link");
     const viewPortfolioBtn = document.querySelector(".view-portfolio-btn");
     const portfolioNavItems = document.querySelectorAll(".portfolio-nav-item");
+    const portfolioItemsList = document.querySelector(".portfolio-items");
     const contactForm = document.getElementById("contact-form");
     const emailModal = document.querySelector(".email-modal");
     const emailModalBody = document.querySelector(".email-modal-body");
     const closeEmailModal = document.querySelector(".close-email-modal");
     const linkToTop = document.querySelector(".link-to-top");
+    let projectsListData;
+
     // grab the sections (targets) and menu_links (triggers)
     // for menu items to apply active link styles to
     const sections = document.querySelectorAll(".template__section");
@@ -19,7 +24,7 @@ document.addEventListener(
     // change the active link a bit above the actual section
     // this way it will change as you're approaching the section rather
     // than waiting until the section has passed the top of the screen
-    const sectionMargin = 100;
+    const sectionMargin = 200;
 
     // keep track of the currently active link
     // use this so as not to change the active link over and over
@@ -28,6 +33,40 @@ document.addEventListener(
     let currentActive = 0;
 
     /* Functions */
+
+    fetch("/data", {
+      method: "GET",
+    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          throw new Error("Something went wrong");
+        }
+      })
+      .then((data) => {
+        projectsListData = data.projects;
+        populateList(data.projects);
+      });
+
+    const populateList = (list) => {
+      portfolioItemsList.innerHTML = "";
+      list.forEach((item) => {
+        let portfolioItem = `<div class="portfolio-item">
+              <a href=${item.websiteLink} class="project-link">
+                <div class="portfolio-item-img-container">
+                  <img src=${item.img} alt="Image of project" class="project-img" />
+                  <i class="fa fa-eye"></i>
+                </div>
+              </a>
+              <div class="project-info">
+                <h3 class="project-name">${item.name}</h3>
+                <p class="project-description">${item.description}</p>
+                <a href=${item.githubLink} class="project-github-link">View code on Github >></a>
+              </div>`;
+        portfolioItemsList.innerHTML += portfolioItem;
+      });
+    };
 
     const removeHash = () => {
       history.replaceState(
@@ -48,6 +87,11 @@ document.addEventListener(
         .querySelector(".active-portfolio-category")
         .classList.remove("active-portfolio-category");
       e.target.classList.add("active-portfolio-category");
+      const filteredList =
+        e.target.id === "all"
+          ? projectsListData
+          : projectsListData.filter((item) => item.category === e.target.id);
+      populateList(filteredList);
     };
 
     const changeSection = (e) => {

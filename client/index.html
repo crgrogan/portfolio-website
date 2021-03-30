@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conor Grogan</title>
-    <link rel="stylesheet" href="./public/style.css" />
+    <link rel="shortcut icon" type="image/jpg" href="./src/favicon.ico" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap"
@@ -22,7 +22,7 @@
         <div class="wrapper">
           <nav>
             <div class="logo">
-              <img src="./public/images/logo.png" alt="Conor Grogan Logo" />
+              <img src="./src/assets/logo.png" alt="Conor Grogan Logo" />
             </div>
             <ul class="nav-links">
               <li class="close-hamburger"><i class="fa fa-times"></i></li>
@@ -47,7 +47,8 @@
         <div class="wrapper">
           <h1>Hello, I'm Conor Grogan.</h1>
           <h2>I am a full stack developer based in Ireland.</h2>
-          <button class="view-portfolio-btn">VIEW MY WORK</button>
+          <button class="banner-btn view-portfolio-btn">VIEW MY WORK</button>
+          <button class="banner-btn">DOWNLOAD CV</button>
         </div>
       </section>
     </header>
@@ -55,78 +56,14 @@
       <section id="portfolio" class="portfolio-section template__section">
         <div class="wrapper">
           <ul class="portfolio-navbar">
-            <li class="portfolio-nav-item active-portfolio-category">All</li>
-            <li class="portfolio-nav-item">Javascript</li>
-            <li class="portfolio-nav-item">React</li>
-            <li class="portfolio-nav-item">Angular</li>
+            <li class="portfolio-nav-item active-portfolio-category" id="all">
+              All
+            </li>
+            <li class="portfolio-nav-item" id="javascript">Javascript</li>
+            <li class="portfolio-nav-item" id="react">React</li>
+            <li class="portfolio-nav-item" id="angular">Angular</li>
           </ul>
-          <div class="portfolio-items">
-            <div class="portfolio-item">
-              <div class="portfolio-item-img-container">
-                <img
-                  src="./public/images/the-movie-hub.png"
-                  alt="Image of project"
-                />
-                <i class="fa fa-eye"></i>
-              </div>
-              <p>
-                Browse the latest movies. Log in to your TMDB account to like,
-                save and rate your favourites.
-              </p>
-            </div>
-            <div class="portfolio-item">
-              <div class="portfolio-item-img-container">
-                <img
-                  src="./public/images/the-movie-hub.png"
-                  alt="Image of project"
-                />
-                <i class="fa fa-eye"></i>
-              </div>
-              <p>
-                Browse the latest movies. Log in to your TMDB account to like,
-                save and rate your favourites.
-              </p>
-            </div>
-            <div class="portfolio-item">
-              <div class="portfolio-item-img-container">
-                <img
-                  src="./public/images/the-movie-hub.png"
-                  alt="Image of project"
-                />
-                <i class="fa fa-eye"></i>
-              </div>
-              <p>
-                Browse the latest movies. Log in to your TMDB account to like,
-                save and rate your favourites.
-              </p>
-            </div>
-            <div class="portfolio-item">
-              <div class="portfolio-item-img-container">
-                <img
-                  src="./public/images/the-movie-hub.png"
-                  alt="Image of project"
-                />
-                <i class="fa fa-eye"></i>
-              </div>
-              <p>
-                Browse the latest movies. Log in to your TMDB account to like,
-                save and rate your favourites.
-              </p>
-            </div>
-            <div class="portfolio-item">
-              <div class="portfolio-item-img-container">
-                <img
-                  src="./public/images/the-movie-hub.png"
-                  alt="Image of project"
-                />
-                <i class="fa fa-eye"></i>
-              </div>
-              <p>
-                Browse the latest movies. Log in to your TMDB account to like,
-                save and rate your favourites.
-              </p>
-            </div>
-          </div>
+          <div class="portfolio-items"></div>
         </div>
       </section>
       <section id="cv" class="cv-section template__section">
@@ -261,6 +198,6 @@
         <p class="copyright">&copy; Copyright 2021 Conor Grogan</p>
       </div>
     </footer>
-    <script src="./public/app.js"></script>
+    <!-- <script src="./dist/main.js"></script> -->
   </body>
 </html>
