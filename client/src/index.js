@@ -52,18 +52,23 @@ document.addEventListener(
     const populateList = (list) => {
       portfolioItemsList.innerHTML = "";
       list.forEach((item) => {
-        let portfolioItem = `<div class="portfolio-item">
-              <a href=${item.websiteLink} class="project-link">
-                <div class="portfolio-item-img-container">
-                  <img src=${item.img} alt="Image of project" class="project-img" />
-                  <i class="fa fa-eye"></i>
-                </div>
-              </a>
-              <div class="project-info">
-                <h3 class="project-name">${item.name}</h3>
-                <p class="project-description">${item.description}</p>
-                <a href=${item.githubLink} class="project-github-link">View code on Github</a>
-              </div>`;
+        let portfolioItem = `
+        <div class="portfolio-item">
+          <a href="${item.websiteLink}" class="project-link">
+            <div class="portfolio-item-img-container">
+              <img src="${item.img}" alt="Image of project" class="project-img" />
+              <i class="fa fa-eye"></i>
+            </div>
+          </a>
+          <div class="project-info">
+            <h3 class="project-name">${item.name}</h3>
+            <p class="project-description">${item.description}</p>
+            <a href="${item.githubLink}" class="project-github-link">
+              View code on Github
+            </a>
+          </div>
+        </div>
+        `;
         portfolioItemsList.innerHTML += portfolioItem;
       });
     };
