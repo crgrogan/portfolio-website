@@ -75,7 +75,7 @@ app.post("/send", (req, res) => {
 });
 
 //Index page (static HTML)
-app.route("*").get(async (req, res) => {
+app.route("/").get(async (req, res) => {
   res.sendFile(path.resolve(__dirname, "client", "dist", "index.html"));
 });
 
