@@ -62,7 +62,7 @@ document.addEventListener(
               <div class="project-info">
                 <h3 class="project-name">${item.name}</h3>
                 <p class="project-description">${item.description}</p>
-                <a href=${item.githubLink} class="project-github-link">View code on Github >></a>
+                <a href=${item.githubLink} class="project-github-link">View code on Github</a>
               </div>`;
         portfolioItemsList.innerHTML += portfolioItem;
       });
