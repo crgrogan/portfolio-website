@@ -11,6 +11,7 @@ document.addEventListener(
     const portfolioNavItems = document.querySelectorAll(".portfolio-nav-item");
     const portfolioItemsList = document.querySelector(".portfolio-items");
     const contactForm = document.getElementById("contact-form");
+    const loaderModal = document.querySelector(".loader-modal");
     const emailModal = document.querySelector(".email-modal");
     const emailModalBody = document.querySelector(".email-modal-body");
     const closeEmailModal = document.querySelector(".close-email-modal");
@@ -118,6 +119,7 @@ document.addEventListener(
     };
 
     const sendMail = (mail) => {
+      loaderModal.style.display = "flex";
       fetch("/send", {
         method: "POST",
         body: mail,
@@ -134,6 +136,7 @@ document.addEventListener(
 
     const clearForm = (msg) => {
       contactForm.reset();
+      loaderModal.style.display = "none";
       emailModalBody.innerHTML = msg;
       emailModal.style.display = "flex";
     };
