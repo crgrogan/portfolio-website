@@ -86,7 +86,6 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-// connect to MongoDB
 mongoose
   .connect(MONGODB, {
     useUnifiedTopology: true,
