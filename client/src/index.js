@@ -86,6 +86,9 @@ document.addEventListener(
 
     const toggleHamburgerMenu = () => {
       document.querySelector(".nav-links").classList.toggle("hamburger-active");
+      document
+        .querySelector(".hamburger-modal")
+        .classList.toggle("hamburger-modal-active");
     };
 
     const changePortfolioCategory = (e) => {
