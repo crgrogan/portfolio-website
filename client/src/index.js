@@ -118,7 +118,7 @@ document.addEventListener(
     };
 
     const sendMail = (mail) => {
-      fetch("http://localhost:5000/send", {
+      fetch("/send", {
         method: "POST",
         body: mail,
       })

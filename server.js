@@ -17,8 +17,6 @@ app.use(cors({ origin: "*" }));
 
 app.use(express.json());
 
-/* app.use("/src", express.static(path.resolve(__dirname, "client", "src"))); */
-
 const transporter = nodemailer.createTransport({
   host: "smtp.live.com",
   port: 587,
@@ -75,9 +73,6 @@ app.post("/send", (req, res) => {
 });
 
 //Index page (static HTML)
-/* app.get("/", async (req, res) => {
-  res.sendFile(path.resolve(__dirname, "client", "dist", "index.html"));
-}); */
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/dist"));
 
