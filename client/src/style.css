@@ -112,7 +112,6 @@ nav {
   padding: 0.25em 0;
   color: var(--secondary-font-color);
   border-bottom: 0.25em solid transparent;
-  /* align-content: center; */
 }
 
 .active-nav-item,
@@ -189,9 +188,6 @@ nav {
   display: flex;
   align-items: center;
   height: 100vh;
-  /*  background-image: url("https://images.unsplash.com/photo-1537819191377-d3305ffddce4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1416&q=80"); */
-  /*  background-image: url("https://images.unsplash.com/photo-1531213203257-16afb0eac95e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1458&q=80"); */
-  /* background-image: url("https://images.unsplash.com/photo-1573767291321-c0af2eaf5266?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1524&q=80"); */
   background-image: url("./assets/banner-image.jpg");
   background-repeat: no-repeat;
   background-position: center;
