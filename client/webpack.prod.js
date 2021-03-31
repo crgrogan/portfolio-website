@@ -6,11 +6,14 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const LinkTypePlugin = require("html-webpack-link-type-plugin");
+const LinkType = LinkTypePlugin.HtmlWebpackLinkTypePlugin;
 
 module.exports = merge(common, {
   mode: "production",
   output: {
     path: path.resolve(__dirname, "dist"),
+    publicPath: "/",
     filename: "main.[contenthash].bundle.js",
     assetModuleFilename: "assets/[name].[contenthash].[ext]",
   },

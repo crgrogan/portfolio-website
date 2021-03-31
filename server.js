@@ -17,7 +17,7 @@ app.use(cors({ origin: "*" }));
 
 app.use(express.json());
 
-app.use("/src", express.static(path.resolve(__dirname, "client", "src"))); //make src static
+/* app.use("/src", express.static(path.resolve(__dirname, "client", "src"))); */
 
 const transporter = nodemailer.createTransport({
   host: "smtp.live.com",
@@ -75,9 +75,19 @@ app.post("/send", (req, res) => {
 });
 
 //Index page (static HTML)
-app.route("/").get(async (req, res) => {
+app.get("*", async (req, res) => {
   res.sendFile(path.resolve(__dirname, "client", "dist", "index.html"));
 });
+/* app.get("*", async (req, res) => {
+  let p = req.path.replace(/^\//, "").replace(/\/$/, "");
+  if (p && p.endsWith(".js")) {
+    let options = { headers: { "content-type": "application/javascript" } };
+    res.sendFile(path.join(__dirname, "client", "dist", p), options);
+  } else if (p && p.endsWith(".css")) {
+    let options = { headers: { "content-type": "text/css" } };
+    res.sendFile(path.join(__dirname, "client", "dist", p), options);
+  } else res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+}); */
 
 // connect to MongoDB
 mongoose
