@@ -13,7 +13,6 @@ module.exports = merge(common, {
   mode: "production",
   output: {
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/",
     filename: "main.[contenthash].bundle.js",
     assetModuleFilename: "assets/[name].[contenthash].[ext]",
   },

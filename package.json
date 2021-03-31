@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/crgrogan/portfolio-website/issues"
   },
-  "homepage": "https://github.com/crgrogan/portfolio-website#readme",
+  "homepage": "https://gentle-anchorage-95271.herokuapp.com/",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
