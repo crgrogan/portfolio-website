@@ -35,7 +35,7 @@ document.addEventListener(
 
     /* Functions */
 
-    fetch("http://localhost:5000/data", {
+    fetch("/data", {
       method: "GET",
     })
       .then((res) => {
