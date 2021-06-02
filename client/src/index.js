@@ -35,7 +35,7 @@ document.addEventListener(
 
     /* Functions */
 
-    fetch("/data", {
+    fetch("http://localhost:5000/data", {
       method: "GET",
     })
       .then((res) => {
@@ -65,7 +65,7 @@ document.addEventListener(
             <h3 class="project-name">${item.name}</h3>
             <p class="project-description">${item.description}</p>
             <a href="${item.githubLink}" class="project-github-link">
-              View code on Github
+              View code on GitHub 
             </a>
           </div>
         </div>
