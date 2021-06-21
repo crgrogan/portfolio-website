@@ -1,4 +1,5 @@
 import "./style.css";
+import "../src/assets/DeveloperCV.pdf";
 
 document.addEventListener(
   "DOMContentLoaded",

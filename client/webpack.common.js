@@ -20,6 +20,18 @@ module.exports = {
         test: /\.(svg|png|jpg|gif|ico)$/,
         type: "asset/resource",
       },
+      {
+        test: /\.pdf$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "assets",
+            },
+          },
+        ],
+      },
     ],
   },
 };
