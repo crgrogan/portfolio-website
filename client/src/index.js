@@ -1,5 +1,5 @@
 import "./style.css";
-import "../src/assets/DeveloperCV.pdf";
+import "../src/assets/ConorGrogan_CV.pdf";
 
 document.addEventListener(
   "DOMContentLoaded",
